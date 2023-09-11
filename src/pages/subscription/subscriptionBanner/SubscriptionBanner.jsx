@@ -41,7 +41,7 @@ const SubscriptionBanner = () => {
             Watch the latest movies, TV shows, and award-winning Originals.
           </span>
           <div className="content">
-            <div className="left">
+            <div className="left2">
               <div className="text">
                 <div className="subtext">Movix Premium</div>
                 <div className="subtext1">₹999/year</div>
