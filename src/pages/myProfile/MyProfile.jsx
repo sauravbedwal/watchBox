@@ -108,20 +108,20 @@ const MyProfile = () => {
             <div className="text2">Logout</div>
           </button>
         </div>
-        <div className="carouselTitle">Your Watchlist</div>
+        {array?.length != 0 && array ? (
+          <div className="carouselTitle">Your Watchlist</div>
+        ) : (
+          <div className="carouselTitle">Your Watchlist is Empty.</div>
+        )}
         <div className="content1">
-          {array ? (
-            array?.map((item) => (
-              <MovieCard
-                key={`${item?.mediaType}-${item?.id}`}
-                data={useFetch(`/${item?.mediaType}/${item?.id}`)?.data}
-                fromSearch={false}
-                mediaType={item?.mediaType}
-              />
-            ))
-          ) : (
-            <h2>Watchlist is Empty!!!</h2>
-          )}
+          {array?.map((item) => (
+            <MovieCard
+              key={`${item?.mediaType}-${item?.id}`}
+              data={useFetch(`/${item?.mediaType}/${item?.id}`)?.data}
+              fromSearch={false}
+              mediaType={item?.mediaType}
+            />
+          ))}
         </div>
         {/* {array.map((card) => (
           <Similar
