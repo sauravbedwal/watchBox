@@ -121,6 +121,7 @@
             .circleRating {
                 max-width: 70px;
                 background-color: var(--black2);
+                min-width: 50px;
 
                 @include md {
                     max-width: 90px;
