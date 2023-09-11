@@ -27,14 +27,17 @@
         align-items: center;
         justify-content: space-between;
     }
-    .logo {
+   .logo {
         cursor: pointer;
         img {
-            height: 50px;
-            filter: drop-shadow(2px 2px 0px gray);
-
+            height: 30px;
+            filter: drop-shadow(1px 1px 0px gray);
+@include md {
+    height: 50px;
+}
         }
     }
+    
     .menuItems {
         list-style-type: none;
         display: none;
