@@ -6,6 +6,8 @@ import "./style.scss";
 import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
 import Img from "../../../components/lazyLoadImage/Img";
 import avatar from "../../../assets/avatar.png";
+import { useNavigate } from "react-router-dom";
+
 
 const Cast = ({ data, loading }) => {
   const { url } = useSelector((state) => state.home);
@@ -19,6 +21,12 @@ const Cast = ({ data, loading }) => {
       </div>
     );
   };
+
+   const navigate = useNavigate();
+  const profileClick = (id) => {
+    navigate(`/profile/${id}`);
+  };
+  
   return (
     <div className="castSection">
       <ContentWrapper>
@@ -30,7 +38,9 @@ const Cast = ({ data, loading }) => {
                 ? url.profile + item.profile_path
                 : avatar;
               return (
-                <div key={item.id} className="listItem">
+                <div key={item.id} className="listItem" onClick={() => {
+                    profileClick(item.id);
+                  }}>
                   <div className="profileImg">
                     <Img src={imgUrl} />
                   </div>
