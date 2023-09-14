@@ -51,6 +51,7 @@ const MyProfile = () => {
   const logoutHandler = () => {
     localStorage.setItem("userDetails", null);
     navigate("/");
+    window.location.reload();
   };
 
   return (
@@ -123,20 +124,6 @@ const MyProfile = () => {
             />
           ))}
         </div>
-        {/* {array.map((card) => (
-          <Similar
-            key={`${card?.mediaType}-${card?.id}`}
-            mediaType={card?.mediaType}
-            id={card?.id}
-          />
-        ))}
-        {array.map((card) => (
-          <Recommendation
-            key={`${card?.mediaType}-${card?.id}`}
-            mediaType={card?.mediaType}
-            id={card?.id}
-          />
-        ))} */}
         {/* 
         <Similar mediaType={array[0]?.mediaType} id={array[0]?.id} />
         <Recommendation mediaType={array[0]?.mediaType} id={array[0]?.id} /> */}
