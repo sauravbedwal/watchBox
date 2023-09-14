@@ -31,7 +31,7 @@ const Header = () => {
 
   useEffect(() => {
     setStorage(existingUserDetails);
-  }, [existingUserDetails]);
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
