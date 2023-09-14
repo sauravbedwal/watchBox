@@ -154,29 +154,6 @@ const LogIn = () => {
                 </a>
               </p>
             </div>
-            {/* <div>
-              <Dialog open={open} onClose={handleClose}>
-                <Box component="span" sx={{ p: 2 }} className="box_container">
-                  <img
-                    src="https://cdn.dribbble.com/users/2185205/screenshots/7886140/02-lottie-tick-01-instant-2.gif"
-                    height="250"
-                  />
-                  <h1>Logged In successfully</h1>
-                  <br />
-                  <br />
-                  <button
-                    className="login_signinbutton"
-                    onClick={() => {
-                      handleClose();
-                      navigate("/");
-                    }}
-                    autoFocus
-                  >
-                    Continue to Amazon
-                  </button>
-                </Box>
-              </Dialog>
-            </div> */}
           </div>
         </div>
       </ContentWrapper>
